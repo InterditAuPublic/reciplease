@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		B05B61D22AC6E1CE00D2EF02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B61D12AC6E1CE00D2EF02 /* AppDelegate.swift */; };
 		B05B61D42AC6E1CE00D2EF02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B61D32AC6E1CE00D2EF02 /* SceneDelegate.swift */; };
-		B05B61D62AC6E1CE00D2EF02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B61D52AC6E1CE00D2EF02 /* ViewController.swift */; };
 		B05B61D92AC6E1CE00D2EF02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B05B61D72AC6E1CE00D2EF02 /* Main.storyboard */; };
 		B05B61DC2AC6E1CE00D2EF02 /* Reciplease.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B05B61DA2AC6E1CE00D2EF02 /* Reciplease.xcdatamodeld */; };
 		B05B61DE2AC6E1CF00D2EF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B05B61DD2AC6E1CF00D2EF02 /* Assets.xcassets */; };
@@ -17,6 +16,8 @@
 		B05B61EC2AC6E1CF00D2EF02 /* RecipleaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B61EB2AC6E1CF00D2EF02 /* RecipleaseTests.swift */; };
 		B05B61F62AC6E1CF00D2EF02 /* RecipleaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B61F52AC6E1CF00D2EF02 /* RecipleaseUITests.swift */; };
 		B05B61F82AC6E1CF00D2EF02 /* RecipleaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B61F72AC6E1CF00D2EF02 /* RecipleaseUITestsLaunchTests.swift */; };
+		B0CC361F2AD833020001C4E1 /* IngredientCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CC361E2AD833020001C4E1 /* IngredientCellView.swift */; };
+		B0CC36212AD835490001C4E1 /* IngredientListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CC36202AD835490001C4E1 /* IngredientListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,6 @@
 		B05B61CE2AC6E1CE00D2EF02 /* Reciplease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reciplease.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B05B61D12AC6E1CE00D2EF02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B05B61D32AC6E1CE00D2EF02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B05B61D52AC6E1CE00D2EF02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B05B61D82AC6E1CE00D2EF02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B05B61DB2AC6E1CE00D2EF02 /* Reciplease.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Reciplease.xcdatamodel; sourceTree = "<group>"; };
 		B05B61DD2AC6E1CF00D2EF02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +51,8 @@
 		B05B61F12AC6E1CF00D2EF02 /* RecipleaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipleaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B05B61F52AC6E1CF00D2EF02 /* RecipleaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipleaseUITests.swift; sourceTree = "<group>"; };
 		B05B61F72AC6E1CF00D2EF02 /* RecipleaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipleaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B0CC361E2AD833020001C4E1 /* IngredientCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCellView.swift; sourceTree = "<group>"; };
+		B0CC36202AD835490001C4E1 /* IngredientListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,13 +103,10 @@
 		B05B61D02AC6E1CE00D2EF02 /* Reciplease */ = {
 			isa = PBXGroup;
 			children = (
-				B05B61D12AC6E1CE00D2EF02 /* AppDelegate.swift */,
-				B05B61D32AC6E1CE00D2EF02 /* SceneDelegate.swift */,
-				B05B61D52AC6E1CE00D2EF02 /* ViewController.swift */,
-				B05B61D72AC6E1CE00D2EF02 /* Main.storyboard */,
-				B05B61DD2AC6E1CF00D2EF02 /* Assets.xcassets */,
-				B05B61DF2AC6E1CF00D2EF02 /* LaunchScreen.storyboard */,
-				B05B61E22AC6E1CF00D2EF02 /* Info.plist */,
+				B0CC361A2AD830C40001C4E1 /* Supporting Files */,
+				B0CC361D2AD830E80001C4E1 /* Model */,
+				B0CC361C2AD830DE0001C4E1 /* View */,
+				B0CC361B2AD830D00001C4E1 /* Controller */,
 				B05B61DA2AC6E1CE00D2EF02 /* Reciplease.xcdatamodeld */,
 			);
 			path = Reciplease;
@@ -128,6 +127,42 @@
 				B05B61F72AC6E1CF00D2EF02 /* RecipleaseUITestsLaunchTests.swift */,
 			);
 			path = RecipleaseUITests;
+			sourceTree = "<group>";
+		};
+		B0CC361A2AD830C40001C4E1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B05B61E22AC6E1CF00D2EF02 /* Info.plist */,
+				B05B61DD2AC6E1CF00D2EF02 /* Assets.xcassets */,
+				B05B61DF2AC6E1CF00D2EF02 /* LaunchScreen.storyboard */,
+				B05B61D12AC6E1CE00D2EF02 /* AppDelegate.swift */,
+				B05B61D32AC6E1CE00D2EF02 /* SceneDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B0CC361B2AD830D00001C4E1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B0CC36202AD835490001C4E1 /* IngredientListController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B0CC361C2AD830DE0001C4E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B05B61D72AC6E1CE00D2EF02 /* Main.storyboard */,
+				B0CC361E2AD833020001C4E1 /* IngredientCellView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B0CC361D2AD830E80001C4E1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +297,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B05B61DC2AC6E1CE00D2EF02 /* Reciplease.xcdatamodeld in Sources */,
-				B05B61D62AC6E1CE00D2EF02 /* ViewController.swift in Sources */,
+				B0CC361F2AD833020001C4E1 /* IngredientCellView.swift in Sources */,
+				B0CC36212AD835490001C4E1 /* IngredientListController.swift in Sources */,
 				B05B61D22AC6E1CE00D2EF02 /* AppDelegate.swift in Sources */,
 				B05B61D42AC6E1CE00D2EF02 /* SceneDelegate.swift in Sources */,
 			);
@@ -448,7 +484,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6T4FKUCAHQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Reciplease/Info.plist;
+				INFOPLIST_FILE = "Reciplease/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -476,7 +512,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6T4FKUCAHQ;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Reciplease/Info.plist;
+				INFOPLIST_FILE = "Reciplease/Supporting Files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
