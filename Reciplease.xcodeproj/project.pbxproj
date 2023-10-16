@@ -18,6 +18,7 @@
 		B05B61F82AC6E1CF00D2EF02 /* RecipleaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B61F72AC6E1CF00D2EF02 /* RecipleaseUITestsLaunchTests.swift */; };
 		B0CC361F2AD833020001C4E1 /* IngredientCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CC361E2AD833020001C4E1 /* IngredientCellView.swift */; };
 		B0CC36212AD835490001C4E1 /* IngredientListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CC36202AD835490001C4E1 /* IngredientListController.swift */; };
+		B0CC36272AD8B8BA0001C4E1 /* FavoriteListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CC36262AD8B8BA0001C4E1 /* FavoriteListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		B05B61F72AC6E1CF00D2EF02 /* RecipleaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipleaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		B0CC361E2AD833020001C4E1 /* IngredientCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCellView.swift; sourceTree = "<group>"; };
 		B0CC36202AD835490001C4E1 /* IngredientListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientListController.swift; sourceTree = "<group>"; };
+		B0CC36262AD8B8BA0001C4E1 /* FavoriteListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +109,6 @@
 				B0CC361D2AD830E80001C4E1 /* Model */,
 				B0CC361C2AD830DE0001C4E1 /* View */,
 				B0CC361B2AD830D00001C4E1 /* Controller */,
-				B05B61DA2AC6E1CE00D2EF02 /* Reciplease.xcdatamodeld */,
 			);
 			path = Reciplease;
 			sourceTree = "<group>";
@@ -145,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				B0CC36202AD835490001C4E1 /* IngredientListController.swift */,
+				B0CC36262AD8B8BA0001C4E1 /* FavoriteListController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -161,6 +163,7 @@
 		B0CC361D2AD830E80001C4E1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B05B61DA2AC6E1CE00D2EF02 /* Reciplease.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B05B61DC2AC6E1CE00D2EF02 /* Reciplease.xcdatamodeld in Sources */,
+				B0CC36272AD8B8BA0001C4E1 /* FavoriteListController.swift in Sources */,
 				B0CC361F2AD833020001C4E1 /* IngredientCellView.swift in Sources */,
 				B0CC36212AD835490001C4E1 /* IngredientListController.swift in Sources */,
 				B05B61D22AC6E1CE00D2EF02 /* AppDelegate.swift in Sources */,
