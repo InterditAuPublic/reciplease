@@ -21,6 +21,8 @@ class FavoriteListController: UIViewController {
     // MARK: View lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        _delegateSetup()
+        _dataSourceSetup()
         _downloadRecipes()
     }
     
@@ -39,7 +41,41 @@ class FavoriteListController: UIViewController {
             print("recipe!")
             noFavoriteView.isHidden = true
         }
-//        favoriteRecipeTableView.reloadData()
+        favoriteRecipeTableView.reloadData()
     }
 }
 
+
+// MARK: Delegate extension
+extension FavoriteListController: UITableViewDelegate {
+    // MARK: Private method
+    /// Setup the delegate
+    private func _delegateSetup() {
+        favoriteRecipeTableView.delegate = self
+    }
+}
+
+// MARK: Data source extension
+extension FavoriteListController: UITableViewDataSource {
+    // MARK: Public method
+    /// Set the number of row of the table view
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        12
+    }
+    
+    /// Configure each cells of the table view
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        /// Get cell to reuse
+        guard let recipeCell = tableView.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath) as? RecipeCellView else {
+            return UITableViewCell()
+        }
+       
+        return recipeCell
+    }
+    
+    // MARK: Private method
+    /// Setup the source
+    private func _dataSourceSetup() {
+        favoriteRecipeTableView.dataSource = self
+    }
+}

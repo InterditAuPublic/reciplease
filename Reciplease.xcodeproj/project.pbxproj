@@ -19,6 +19,9 @@
 		B0CC361F2AD833020001C4E1 /* IngredientCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CC361E2AD833020001C4E1 /* IngredientCellView.swift */; };
 		B0CC36212AD835490001C4E1 /* IngredientListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CC36202AD835490001C4E1 /* IngredientListController.swift */; };
 		B0CC36272AD8B8BA0001C4E1 /* FavoriteListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CC36262AD8B8BA0001C4E1 /* FavoriteListController.swift */; };
+		B0D5624B2ADE069F00CAB075 /* RecipeListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5624A2ADE069F00CAB075 /* RecipeListController.swift */; };
+		B0D5624D2ADE07D500CAB075 /* RecipeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5624C2ADE07D500CAB075 /* RecipeCellView.swift */; };
+		B0D562502ADFFAB100CAB075 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0D5624F2ADFFAB100CAB075 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		B0CC361E2AD833020001C4E1 /* IngredientCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientCellView.swift; sourceTree = "<group>"; };
 		B0CC36202AD835490001C4E1 /* IngredientListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientListController.swift; sourceTree = "<group>"; };
 		B0CC36262AD8B8BA0001C4E1 /* FavoriteListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListController.swift; sourceTree = "<group>"; };
+		B0D5624A2ADE069F00CAB075 /* RecipeListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListController.swift; sourceTree = "<group>"; };
+		B0D5624C2ADE07D500CAB075 /* RecipeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCellView.swift; sourceTree = "<group>"; };
+		B0D5624F2ADFFAB100CAB075 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0D562502ADFFAB100CAB075 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +96,7 @@
 				B05B61EA2AC6E1CF00D2EF02 /* RecipleaseTests */,
 				B05B61F42AC6E1CF00D2EF02 /* RecipleaseUITests */,
 				B05B61CF2AC6E1CE00D2EF02 /* Products */,
+				B0D5624E2ADFFAB000CAB075 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -147,6 +155,7 @@
 			children = (
 				B0CC36202AD835490001C4E1 /* IngredientListController.swift */,
 				B0CC36262AD8B8BA0001C4E1 /* FavoriteListController.swift */,
+				B0D5624A2ADE069F00CAB075 /* RecipeListController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -156,6 +165,7 @@
 			children = (
 				B05B61D72AC6E1CE00D2EF02 /* Main.storyboard */,
 				B0CC361E2AD833020001C4E1 /* IngredientCellView.swift */,
+				B0D5624C2ADE07D500CAB075 /* RecipeCellView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -166,6 +176,14 @@
 				B05B61DA2AC6E1CE00D2EF02 /* Reciplease.xcdatamodeld */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B0D5624E2ADFFAB000CAB075 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0D5624F2ADFFAB100CAB075 /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +319,8 @@
 			files = (
 				B05B61DC2AC6E1CE00D2EF02 /* Reciplease.xcdatamodeld in Sources */,
 				B0CC36272AD8B8BA0001C4E1 /* FavoriteListController.swift in Sources */,
+				B0D5624D2ADE07D500CAB075 /* RecipeCellView.swift in Sources */,
+				B0D5624B2ADE069F00CAB075 /* RecipeListController.swift in Sources */,
 				B0CC361F2AD833020001C4E1 /* IngredientCellView.swift in Sources */,
 				B0CC36212AD835490001C4E1 /* IngredientListController.swift in Sources */,
 				B05B61D22AC6E1CE00D2EF02 /* AppDelegate.swift in Sources */,
@@ -492,6 +512,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -520,6 +541,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

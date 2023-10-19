@@ -18,6 +18,7 @@ class IngredientListController: UIViewController {
     
     // MARK: Properties
     private var _ingredients: [String] = []
+    private let _searchToRecipeListSegue = "searchToRecipeListSegue"
     
     // MARK: Outlets
     @IBOutlet weak var ingredientTextField: UITextField!
@@ -50,7 +51,9 @@ class IngredientListController: UIViewController {
         // Timeout for the loadingView while the API process isn't created
         DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
             self.loadingView.isHidden = true
+            self.performSegue(withIdentifier: self._searchToRecipeListSegue, sender: self)
         }
+        
         
     }
     
@@ -86,9 +89,7 @@ extension IngredientListController: UITableViewDataSource {
         
         return ingredientCell
     }
-    
-    // MARK: Private Methods
-    /// Setup the source of the data
+
     private func _dataSourceSetup() {
         ingredientTableView.dataSource = self
     }
