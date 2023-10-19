@@ -25,10 +25,18 @@ class RecipeListController: UIViewController {
     }
     
     // MARK: Properties
-    private let _segueToDetails = "segueToDetails"
-    
+    private let _segueToDetails = "recipeListToDetailSegue"
     // MARK: Method
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: _segueToDetails, sender: self)
+    }
 }
+
+
+
+
+
 
 
 // MARK: Delegate extension
