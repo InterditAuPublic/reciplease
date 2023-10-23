@@ -21,9 +21,7 @@ class RecipeCellView: UITableViewCell {
         _recipeIngredientsLabel.text = recipe["ingredientLines"] as? String
         _recipeLikesLabel.text = recipe["yield"] as? String
         _recipeTimeLabel.text = recipe["totalTime"] as? String
-        if let image = recipe["image"] as? String {
-            _recipeImageView.image = UIImage(systemName: "cup.and.saucer");
-        }
+        _recipeImageView.image = UIImage(named: "recipe_default_background")
     }
     
     
