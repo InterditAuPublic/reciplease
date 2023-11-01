@@ -12,7 +12,9 @@ class FavoriteListController: UIViewController {
     
     // MARK: Properties
 //    private var favoriteRecipes : [String] = ["yes!"]
-    private var favoriteRecipes : [String] = []
+    private var _favoriteRecipes : [String] = []
+    private let _segueToDetails = "favoriteListToDetailSegue"
+    private let _recipeManager = RecipeManager()
     
     // MARK: Outlet
     @IBOutlet weak var noFavoriteView: UIView!
@@ -29,12 +31,22 @@ class FavoriteListController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         _downloadRecipes()
     }
+
     
-    // MARK: Method
+    // MARK: Methods
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == _segueToDetails, let detailViewVC = segue.destination as? DetailsViewController else { return }
+        detailViewVC.recipeManager = _recipeManager
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: _segueToDetails, sender: self)
+    }
+    
     /// Retrieve favorites recipes
     private func _downloadRecipes() {
         
-        if favoriteRecipes.count == 0 {
+        if _favoriteRecipes.count == 0 {
             print("no recipe")
             noFavoriteView.isHidden = false
         } else {

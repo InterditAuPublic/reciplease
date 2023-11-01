@@ -16,12 +16,19 @@ class RecipeCellView: UITableViewCell {
     }
     
     // MARK: Methods
-    func configure(withRecipe recipe: [String : Any]) {
-        _recipeTitleLabel.text = recipe["title"] as? String
-        _recipeIngredientsLabel.text = recipe["ingredientLines"] as? String
-        _recipeLikesLabel.text = recipe["yield"] as? String
-        _recipeTimeLabel.text = recipe["totalTime"] as? String
+    func configure(withRecipe recipe: Recipe) {
         _recipeImageView.image = UIImage(named: "recipe_default_background")
+//        if let url = recipe.image {
+//            _recipeImageView.dowloadFrom(url)
+//        }
+        _recipeIngredientsLabel.text = recipe.ingredients.compactMap({$0.food}).joined(separator: ", ")
+        _recipeIngredientsLabel.accessibilityLabel = _recipeIngredientsLabel.text
+        _recipeTitleLabel.text = recipe.label
+        _recipeTitleLabel.accessibilityLabel = _recipeTitleLabel.text
+        _recipeLikesLabel.text = "\(recipe.yield)"
+        _recipeLikesLabel.accessibilityLabel = "\(recipe.yield) likes"
+        _recipeTimeLabel.text = "\(recipe.totalTime)"
+        _recipeTimeLabel.accessibilityLabel = "\(recipe.totalTime) to prepare this recipe"
     }
     
     

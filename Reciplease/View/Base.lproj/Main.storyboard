@@ -491,8 +491,8 @@
                             <tableView contentMode="scaleToFill" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="170" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qfo-ra-3ng" userLabel="Recipe Table View">
                                 <rect key="frame" x="0.0" y="103" width="430" height="746"/>
                                 <color key="backgroundColor" name="Background"/>
-                                <color key="sectionIndexBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="sectionIndexTrackingBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" name="Background"/>
+                                <color key="sectionIndexTrackingBackgroundColor" name="Background"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="recipeCell" rowHeight="170" id="fWy-Cm-aNn" userLabel="Table View Cell" customClass="RecipeCellView" customModule="Reciplease" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="430" height="170"/>
@@ -610,20 +610,53 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vHZ-hD-aab" userLabel="No Recipe Found View">
+                                <rect key="frame" x="0.0" y="103" width="430" height="746"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Xue-cb-TlS">
+                                        <rect key="frame" x="0.0" y="335.66666666666669" width="430" height="75"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No recipe found with thoses ingredients" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999998807907104" translatesAutoresizingMaskIntoConstraints="NO" id="Khv-1v-MSx">
+                                                <rect key="frame" x="20" y="0.0" width="390" height="75"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                                <color key="textColor" name="Foreground"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Khv-1v-MSx" secondAttribute="trailing" constant="20" id="5hS-KD-luw"/>
+                                            <constraint firstAttribute="height" constant="75" id="Mqf-MF-4Wv"/>
+                                            <constraint firstItem="Khv-1v-MSx" firstAttribute="leading" secondItem="Xue-cb-TlS" secondAttribute="leading" constant="20" id="WRD-3p-xSS"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="Background"/>
+                                <constraints>
+                                    <constraint firstItem="Xue-cb-TlS" firstAttribute="centerY" secondItem="vHZ-hD-aab" secondAttribute="centerY" id="2gZ-wY-FDJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="Xue-cb-TlS" secondAttribute="trailing" id="SBB-br-dEz"/>
+                                    <constraint firstItem="Xue-cb-TlS" firstAttribute="centerX" secondItem="vHZ-hD-aab" secondAttribute="centerX" id="SPM-Ai-ZMG"/>
+                                    <constraint firstItem="Xue-cb-TlS" firstAttribute="leading" secondItem="vHZ-hD-aab" secondAttribute="leading" id="sfM-I7-uBO"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wie-5J-utZ"/>
                         <color key="backgroundColor" name="Background"/>
                         <constraints>
+                            <constraint firstItem="wie-5J-utZ" firstAttribute="bottom" secondItem="vHZ-hD-aab" secondAttribute="bottom" id="5qD-22-5dp"/>
+                            <constraint firstItem="vHZ-hD-aab" firstAttribute="leading" secondItem="wie-5J-utZ" secondAttribute="leading" id="80V-Ee-avy"/>
                             <constraint firstItem="wie-5J-utZ" firstAttribute="trailing" secondItem="qfo-ra-3ng" secondAttribute="trailing" id="D6H-qZ-srg"/>
                             <constraint firstItem="wie-5J-utZ" firstAttribute="bottom" secondItem="qfo-ra-3ng" secondAttribute="bottom" id="Exn-Qn-AZi"/>
+                            <constraint firstItem="vHZ-hD-aab" firstAttribute="top" secondItem="wie-5J-utZ" secondAttribute="top" id="G6F-cK-9my"/>
                             <constraint firstItem="qfo-ra-3ng" firstAttribute="leading" secondItem="wie-5J-utZ" secondAttribute="leading" id="Ooc-Tg-QcX"/>
                             <constraint firstItem="qfo-ra-3ng" firstAttribute="top" secondItem="wie-5J-utZ" secondAttribute="top" id="hjT-Dg-fRF"/>
+                            <constraint firstItem="wie-5J-utZ" firstAttribute="trailing" secondItem="vHZ-hD-aab" secondAttribute="trailing" id="r3p-AL-uOs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Reciplease" largeTitleDisplayMode="always" id="kcP-nB-Kud">
                         <barButtonItem key="backBarButtonItem" title="Back" id="zyD-yn-bm6"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="noRecipeFoundView" destination="vHZ-hD-aab" id="yU5-cG-fol"/>
                         <outlet property="recipeTableView" destination="qfo-ra-3ng" id="pNC-0Z-6mp"/>
                         <segue destination="ePn-Iw-qr9" kind="show" identifier="recipeListToDetailSegue" id="62n-zD-ubV"/>
                     </connections>
@@ -731,7 +764,7 @@
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5vY-gN-P56" userLabel="Ingredient Table View">
                                 <rect key="frame" x="6" y="427.66666666666674" width="418" height="331.33333333333326"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="Background"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ingredientCell" focusStyle="custom" textLabel="LDw-LW-K3b" style="IBUITableViewCellStyleDefault" id="5iS-sa-L2L" customClass="IngredientCellView" customModule="Reciplease" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="418" height="43.666667938232422"/>
@@ -748,7 +781,7 @@
                                                     <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="Background"/>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="_ingredientLabel" destination="LDw-LW-K3b" id="dPm-8o-gHr"/>
@@ -770,7 +803,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="k48-DX-5pP"/>
-                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="Q38-9D-QLC" firstAttribute="leading" secondItem="k48-DX-5pP" secondAttribute="leading" id="2og-o9-hhF"/>
                             <constraint firstItem="k48-DX-5pP" firstAttribute="trailing" secondItem="2So-9F-UT1" secondAttribute="trailing" constant="45" id="9Ze-Hm-eB2"/>
@@ -820,7 +853,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="62n-zD-ubV"/>
+        <segue reference="Qco-Lw-8md"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>

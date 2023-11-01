@@ -54,12 +54,16 @@ class IngredientListController: UIViewController {
             if isASuccess {
                 self.performSegue(withIdentifier: self._searchToRecipeListSegue, sender: self)
             } else {
-                // TODO: CREATE AlertHelper
                 let alert = UIAlertController(title: "Error", message: "An error occured while loading recipes", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default))
                 self.present(alert, animated: true)
             }
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard segue.identifier == _searchToRecipeListSegue, let recipeListVC = segue.destination as? RecipeListController else { return }
+        recipeListVC.recipeManager = _recipeManager
     }
     
     // MARK: Methods
