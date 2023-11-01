@@ -13,7 +13,7 @@ import UIKit
 class RecipeListController: UIViewController {
 
     // MARK: Properties
-    private let _recipeManager = RecipeManager()
+    var recipeManager = RecipeManager()
 
     @IBOutlet weak var recipeTableView: UITableView!
     
@@ -26,9 +26,16 @@ class RecipeListController: UIViewController {
     
     // MARK: Properties
     private let _segueToDetails = "recipeListToDetailSegue"
+    private var _selectedRecipe: Recipe?
     
-    // MARK: Method
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { 
+    // MARK: Methods
+    /// Prepare the segue to pass data to next view
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        _recipeManager.selectedRecipe = _recipeManager.downloadedRecipes[indexPath.row]
         performSegue(withIdentifier: _segueToDetails, sender: self)
     }
 }
@@ -46,8 +53,7 @@ extension RecipeListController: UITableViewDelegate {
 extension RecipeListController: UITableViewDataSource {
     /// Setup the number of row in the table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        _recipeManager.downloadedRecipes.count
-        12
+        recipeManager.downloadedRecipes.count
     }
     
     /// Configure each cells of the table view
@@ -56,6 +62,9 @@ extension RecipeListController: UITableViewDataSource {
         guard let recipeCell = tableView.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath) as? RecipeCellView else {
             return UITableViewCell()
         }
+        
+        recipeCell.configure(withRecipe: recipeManager.downloadedRecipes[indexPath.row])
+        
         return recipeCell
     }
     

@@ -26,6 +26,7 @@ class RecipeManager {
                case .success:
                    if let hits = response.value  {
                        self._downloadedRecipes = hits.hits.map{$0.recipe}
+
                        requestSuccess = true
                    }
                case .failure(let error):
@@ -34,6 +35,8 @@ class RecipeManager {
                completionHandler(requestSuccess)
            }
        }
+    
+    
     
     init(networkManager: NetworkManager = NetworkManager()) {
         _networkManager = networkManager
