@@ -25,8 +25,9 @@
 		B0CC36272AD8B8BA0001C4E1 /* FavoriteListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CC36262AD8B8BA0001C4E1 /* FavoriteListController.swift */; };
 		B0D5624B2ADE069F00CAB075 /* RecipeListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5624A2ADE069F00CAB075 /* RecipeListController.swift */; };
 		B0D5624D2ADE07D500CAB075 /* RecipeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5624C2ADE07D500CAB075 /* RecipeCellView.swift */; };
-		B0D562502ADFFAB100CAB075 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0D5624F2ADFFAB100CAB075 /* CoreData.framework */; };
 		B0E41D3F2AF2875900A1F0E9 /* RecipeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E41D3E2AF2875900A1F0E9 /* RecipeManager.swift */; };
+		B0E41D422AF28C0200A1F0E9 /* CodeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E41D412AF28C0200A1F0E9 /* CodeDataManager.swift */; };
+		B0E41D442AF28C1D00A1F0E9 /* CoraDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E41D432AF28C1D00A1F0E9 /* CoraDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,8 +69,9 @@
 		B0CC36262AD8B8BA0001C4E1 /* FavoriteListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteListController.swift; sourceTree = "<group>"; };
 		B0D5624A2ADE069F00CAB075 /* RecipeListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListController.swift; sourceTree = "<group>"; };
 		B0D5624C2ADE07D500CAB075 /* RecipeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCellView.swift; sourceTree = "<group>"; };
-		B0D5624F2ADFFAB100CAB075 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		B0E41D3E2AF2875900A1F0E9 /* RecipeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeManager.swift; sourceTree = "<group>"; };
+		B0E41D412AF28C0200A1F0E9 /* CodeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeDataManager.swift; sourceTree = "<group>"; };
+		B0E41D432AF28C1D00A1F0E9 /* CoraDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoraDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +79,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0D562502ADFFAB100CAB075 /* CoreData.framework in Frameworks */,
 				B01FAFEA2AE1480E002E9D21 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,10 +185,11 @@
 		B0CC361D2AD830E80001C4E1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B05B61DA2AC6E1CE00D2EF02 /* Reciplease.xcdatamodeld */,
+				B0E41D402AF28B5C00A1F0E9 /* CoreData */,
 				B049244A2AE7085A00728AF6 /* Recipe.swift */,
 				B049244C2AE70D0F00728AF6 /* NetworkManager.swift */,
 				B0E41D3E2AF2875900A1F0E9 /* RecipeManager.swift */,
+				B0E41D412AF28C0200A1F0E9 /* CodeDataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -195,9 +197,17 @@
 		B0D5624E2ADFFAB000CAB075 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B0D5624F2ADFFAB100CAB075 /* CoreData.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B0E41D402AF28B5C00A1F0E9 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B05B61DA2AC6E1CE00D2EF02 /* Reciplease.xcdatamodeld */,
+				B0E41D432AF28C1D00A1F0E9 /* CoraDataStack.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,11 +348,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B05B61DC2AC6E1CE00D2EF02 /* Reciplease.xcdatamodeld in Sources */,
+				B0E41D442AF28C1D00A1F0E9 /* CoraDataStack.swift in Sources */,
 				B0CC36272AD8B8BA0001C4E1 /* FavoriteListController.swift in Sources */,
 				B01FAFEC2AE155EC002E9D21 /* DetailsViewController.swift in Sources */,
 				B0D5624D2ADE07D500CAB075 /* RecipeCellView.swift in Sources */,
 				B049244D2AE70D0F00728AF6 /* NetworkManager.swift in Sources */,
 				B0D5624B2ADE069F00CAB075 /* RecipeListController.swift in Sources */,
+				B0E41D422AF28C0200A1F0E9 /* CodeDataManager.swift in Sources */,
 				B0CC361F2AD833020001C4E1 /* IngredientCellView.swift in Sources */,
 				B0CC36212AD835490001C4E1 /* IngredientListController.swift in Sources */,
 				B049244B2AE7085A00728AF6 /* Recipe.swift in Sources */,
