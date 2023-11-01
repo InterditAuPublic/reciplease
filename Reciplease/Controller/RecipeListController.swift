@@ -12,8 +12,8 @@ import UIKit
 
 class RecipeListController: UIViewController {
 
-    // MARK: Public
-    // MARK: Outlet
+    // MARK: Properties
+    private let _recipeManager = RecipeManager()
 
     @IBOutlet weak var recipeTableView: UITableView!
     
@@ -26,22 +26,16 @@ class RecipeListController: UIViewController {
     
     // MARK: Properties
     private let _segueToDetails = "recipeListToDetailSegue"
+    
     // MARK: Method
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) { 
         performSegue(withIdentifier: _segueToDetails, sender: self)
     }
 }
 
 
-
-
-
-
-
 // MARK: Delegate extension
 extension RecipeListController: UITableViewDelegate {
-    // MARK: Private method
     /// Setup the delegate
     private func _delegateSetup() {
         recipeTableView.delegate = self
@@ -50,22 +44,22 @@ extension RecipeListController: UITableViewDelegate {
 
 // MARK: Data source extension
 extension RecipeListController: UITableViewDataSource {
-    // MARK: Public method
+    /// Setup the number of row in the table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        _recipeManager.downloadedRecipes.count
         12
     }
     
     /// Configure each cells of the table view
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Get cell to reuse
+        /// Get cell that will be reused
         guard let recipeCell = tableView.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath) as? RecipeCellView else {
             return UITableViewCell()
         }
         return recipeCell
     }
     
-    // MARK: Private method
-    /// Setup the source of data
+    /// Setup the source of the data
     private func _dataSourceSetup() {
         recipeTableView.dataSource = self
     }

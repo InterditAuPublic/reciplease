@@ -396,11 +396,6 @@
                             <constraint firstItem="KEv-YH-HKJ" firstAttribute="leading" secondItem="QbW-t8-YK4" secondAttribute="leading" constant="30" id="vYA-vm-ui6"/>
                             <constraint firstItem="vwO-ow-Wvw" firstAttribute="top" secondItem="KEv-YH-HKJ" secondAttribute="bottom" constant="15" id="xbB-L5-fAH"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="Oms-zu-m2n"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Reciplease" id="ITD-bY-Tuv">
                         <barButtonItem key="backBarButtonItem" title="Back" id="IAm-Ja-akW">
@@ -494,7 +489,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView contentMode="scaleToFill" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="170" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qfo-ra-3ng" userLabel="Recipe Table View">
-                                <rect key="frame" x="0.0" y="111" width="430" height="738"/>
+                                <rect key="frame" x="0.0" y="103" width="430" height="746"/>
                                 <color key="backgroundColor" name="Background"/>
                                 <color key="sectionIndexBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexTrackingBackgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -521,16 +516,16 @@
                                                             <rect key="frame" x="5" y="5" width="60" height="45.666666666666664"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="8F3-3e-2FW">
-                                                                    <rect key="frame" x="14.666666666666689" y="0.0" width="45.333333333333343" height="20.333333333333332"/>
+                                                                    <rect key="frame" x="16.333333333333311" y="0.0" width="43.666666666666657" height="20.333333333333332"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10k" textAlignment="natural" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eMd-FJ-7Vb" userLabel="45m">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="28.333333333333332" height="20.333333333333332"/>
-                                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10k" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eMd-FJ-7Vb" userLabel="45m">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="26.666666666666668" height="20.333333333333332"/>
+                                                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                                             <color key="textColor" name="Foreground"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand.thumbsup.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="lU1-AT-efr">
-                                                                            <rect key="frame" x="30.333333333333314" y="3.3333333333333321" width="15" height="13.666666666666668"/>
+                                                                            <rect key="frame" x="28.666666666666686" y="3.3333333333333321" width="15" height="13.666666666666668"/>
                                                                             <color key="tintColor" name="AccentColor"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="15" id="Kui-tA-7Eu"/>
@@ -540,16 +535,16 @@
                                                                     </subviews>
                                                                 </stackView>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="dkp-mn-IF1">
-                                                                    <rect key="frame" x="6.3333333333333108" y="25.333333333333336" width="53.666666666666657" height="20.333333333333336"/>
+                                                                    <rect key="frame" x="8" y="25.333333333333336" width="52" height="20.333333333333336"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45m" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UPb-Hn-dq9">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="36.666666666666664" height="20.333333333333332"/>
-                                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="35" height="20.333333333333332"/>
+                                                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                                                             <color key="textColor" name="Foreground"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="3Yr-gf-ZmE">
-                                                                            <rect key="frame" x="38.666666666666686" y="3.6666666666666625" width="15" height="13.666666666666666"/>
+                                                                            <rect key="frame" x="37" y="3.6666666666666625" width="15" height="13.666666666666666"/>
                                                                             <color key="tintColor" name="AccentColor"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" secondItem="3Yr-gf-ZmE" secondAttribute="height" multiplier="1:1" id="M5j-0F-RN7"/>
@@ -622,7 +617,7 @@
                             <constraint firstItem="wie-5J-utZ" firstAttribute="trailing" secondItem="qfo-ra-3ng" secondAttribute="trailing" id="D6H-qZ-srg"/>
                             <constraint firstItem="wie-5J-utZ" firstAttribute="bottom" secondItem="qfo-ra-3ng" secondAttribute="bottom" id="Exn-Qn-AZi"/>
                             <constraint firstItem="qfo-ra-3ng" firstAttribute="leading" secondItem="wie-5J-utZ" secondAttribute="leading" id="Ooc-Tg-QcX"/>
-                            <constraint firstItem="qfo-ra-3ng" firstAttribute="top" secondItem="wie-5J-utZ" secondAttribute="top" constant="8" id="hjT-Dg-fRF"/>
+                            <constraint firstItem="qfo-ra-3ng" firstAttribute="top" secondItem="wie-5J-utZ" secondAttribute="top" id="hjT-Dg-fRF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Reciplease" largeTitleDisplayMode="always" id="kcP-nB-Kud">
