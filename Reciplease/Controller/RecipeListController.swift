@@ -14,20 +14,21 @@ class RecipeListController: UIViewController {
 
     // MARK: Properties
     var recipeManager = RecipeManager()
-
+    private let _segueToDetails = "recipeListToDetailSegue"
+    private var _selectedRecipe: Recipe?
+    
+    // MARK: Outlets
     @IBOutlet weak var recipeTableView: UITableView!
+    @IBOutlet weak var noRecipeFoundView: UIView!
     
     // MARK: View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         _delegateSetup()
         _dataSourceSetup()
+        _checkIfRecipeToDisplay()
     }
-    
-    // MARK: Properties
-    private let _segueToDetails = "recipeListToDetailSegue"
-    private var _selectedRecipe: Recipe?
-    
+
     // MARK: Methods
     /// Prepare the segue to pass data to next view
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -38,6 +39,13 @@ class RecipeListController: UIViewController {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         recipeManager.selectedRecipe = recipeManager.downloadedRecipes[indexPath.row]
         performSegue(withIdentifier: _segueToDetails, sender: self)
+    }
+    
+    /// Check if downloadedRecipes contains recipe, if not display noRecipeFoundView
+    private func _checkIfRecipeToDisplay() {
+        if recipeManager.downloadedRecipes.count == 0 {
+            noRecipeFoundView.isHidden = false
+        }
     }
 }
 
