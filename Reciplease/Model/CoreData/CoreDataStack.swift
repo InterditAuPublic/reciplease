@@ -1,5 +1,5 @@
 //
-//  CoraDataStack.swift
+//  CoreDataStack.swift
 //  Reciplease
 //
 //  Created by Melvin Poutrel on 01/11/2023.

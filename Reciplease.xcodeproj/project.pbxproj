@@ -27,7 +27,7 @@
 		B0D5624D2ADE07D500CAB075 /* RecipeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D5624C2ADE07D500CAB075 /* RecipeCellView.swift */; };
 		B0E41D3F2AF2875900A1F0E9 /* RecipeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E41D3E2AF2875900A1F0E9 /* RecipeManager.swift */; };
 		B0E41D422AF28C0200A1F0E9 /* CodeDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E41D412AF28C0200A1F0E9 /* CodeDataManager.swift */; };
-		B0E41D442AF28C1D00A1F0E9 /* CoraDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E41D432AF28C1D00A1F0E9 /* CoraDataStack.swift */; };
+		B0E41D442AF28C1D00A1F0E9 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E41D432AF28C1D00A1F0E9 /* CoreDataStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +71,7 @@
 		B0D5624C2ADE07D500CAB075 /* RecipeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCellView.swift; sourceTree = "<group>"; };
 		B0E41D3E2AF2875900A1F0E9 /* RecipeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeManager.swift; sourceTree = "<group>"; };
 		B0E41D412AF28C0200A1F0E9 /* CodeDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeDataManager.swift; sourceTree = "<group>"; };
-		B0E41D432AF28C1D00A1F0E9 /* CoraDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoraDataStack.swift; sourceTree = "<group>"; };
+		B0E41D432AF28C1D00A1F0E9 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,7 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				B05B61DA2AC6E1CE00D2EF02 /* Reciplease.xcdatamodeld */,
-				B0E41D432AF28C1D00A1F0E9 /* CoraDataStack.swift */,
+				B0E41D432AF28C1D00A1F0E9 /* CoreDataStack.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -348,7 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B05B61DC2AC6E1CE00D2EF02 /* Reciplease.xcdatamodeld in Sources */,
-				B0E41D442AF28C1D00A1F0E9 /* CoraDataStack.swift in Sources */,
+				B0E41D442AF28C1D00A1F0E9 /* CoreDataStack.swift in Sources */,
 				B0CC36272AD8B8BA0001C4E1 /* FavoriteListController.swift in Sources */,
 				B01FAFEC2AE155EC002E9D21 /* DetailsViewController.swift in Sources */,
 				B0D5624D2ADE07D500CAB075 /* RecipeCellView.swift in Sources */,
