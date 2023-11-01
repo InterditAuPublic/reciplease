@@ -31,11 +31,12 @@ class RecipeListController: UIViewController {
     // MARK: Methods
     /// Prepare the segue to pass data to next view
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
+        guard segue.identifier == _segueToDetails, let detailViewVC = segue.destination as? DetailsViewController else { return }
+        detailViewVC.recipeManager = recipeManager
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        _recipeManager.selectedRecipe = _recipeManager.downloadedRecipes[indexPath.row]
+        recipeManager.selectedRecipe = recipeManager.downloadedRecipes[indexPath.row]
         performSegue(withIdentifier: _segueToDetails, sender: self)
     }
 }

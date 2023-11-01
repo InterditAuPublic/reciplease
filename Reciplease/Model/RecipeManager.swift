@@ -13,6 +13,14 @@ class RecipeManager {
     // MARK: Public
     var downloadedRecipes: [Recipe] { _downloadedRecipes }
     
+    var selectedRecipe: Recipe? {
+        didSet {
+            if let recipe = selectedRecipe {
+                selectedRecipe!.favorite = true
+            }
+        }
+    }
+    
     func getRecipes(forIngredients ingredients: [String], completionHandler: @escaping ((Bool) -> Void)) {
            guard let url = _createRecipeSearchURL(withIngredients: ingredients) else {
                completionHandler(false)

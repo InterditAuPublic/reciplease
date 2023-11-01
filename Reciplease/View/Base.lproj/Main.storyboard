@@ -731,7 +731,7 @@
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5vY-gN-P56" userLabel="Ingredient Table View">
                                 <rect key="frame" x="6" y="427.66666666666674" width="418" height="331.33333333333326"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" name="Background"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ingredientCell" focusStyle="custom" textLabel="LDw-LW-K3b" style="IBUITableViewCellStyleDefault" id="5iS-sa-L2L" customClass="IngredientCellView" customModule="Reciplease" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="418" height="43.666667938232422"/>
@@ -748,7 +748,7 @@
                                                     <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="Background"/>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="_ingredientLabel" destination="LDw-LW-K3b" id="dPm-8o-gHr"/>
@@ -770,7 +770,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="k48-DX-5pP"/>
-                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="Background"/>
                         <constraints>
                             <constraint firstItem="Q38-9D-QLC" firstAttribute="leading" secondItem="k48-DX-5pP" secondAttribute="leading" id="2og-o9-hhF"/>
                             <constraint firstItem="k48-DX-5pP" firstAttribute="trailing" secondItem="2So-9F-UT1" secondAttribute="trailing" constant="45" id="9Ze-Hm-eB2"/>
