@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SRc-qW-iS2">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -442,7 +443,7 @@
         <!--Search-->
         <scene sceneID="a2T-6e-mWb">
             <objects>
-                <navigationController hidesBarsOnSwipe="YES" id="XuZ-ko-90u" sceneMemberID="viewController">
+                <navigationController id="XuZ-ko-90u" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="bM2-aB-r2G"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JKo-gM-Q3z">
                         <rect key="frame" x="0.0" y="59" width="430" height="44"/>
@@ -853,7 +854,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Qco-Lw-8md"/>
+        <segue reference="62n-zD-ubV"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
