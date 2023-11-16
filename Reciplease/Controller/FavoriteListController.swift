@@ -7,12 +7,11 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class FavoriteListController: UIViewController {
     
     // MARK: Properties
-//    private var favoriteRecipes : [String] = ["yes!"]
-    private var _favoriteRecipes : [String] = []
     private let _segueToDetails = "favoriteListToDetailSegue"
     private let _recipeManager = RecipeManager()
     
@@ -40,17 +39,18 @@ class FavoriteListController: UIViewController {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        _recipeManager.selectedRecipe = _recipeManager.favoriteRecipes[indexPath.row]
         performSegue(withIdentifier: _segueToDetails, sender: self)
     }
     
     /// Retrieve favorites recipes
+    /// Get recipes from CoreData
     private func _downloadRecipes() {
+        _recipeManager.reloadFavoriteList()
         
-        if _favoriteRecipes.count == 0 {
-            print("no recipe")
+        if _recipeManager.favoriteRecipes.count == 0 {
             noFavoriteView.isHidden = false
         } else {
-            print("recipe!")
             noFavoriteView.isHidden = true
         }
         favoriteRecipeTableView.reloadData()
@@ -70,7 +70,7 @@ extension FavoriteListController: UITableViewDelegate {
 extension FavoriteListController: UITableViewDataSource {
     /// Setup the number of row in the table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        12 //TODO: replace by the number of favorites Stored in CoreData
+        _recipeManager.favoriteRecipes.count
     }
     
     /// Configure each cells of the table view
@@ -79,6 +79,9 @@ extension FavoriteListController: UITableViewDataSource {
         guard let recipeCell = tableView.dequeueReusableCell(withIdentifier: "recipeCell", for: indexPath) as? RecipeCellView else {
             return UITableViewCell()
         }
+        
+        recipeCell.configure(withRecipe: _recipeManager.favoriteRecipes[indexPath.row])
+        
         return recipeCell
     }
     

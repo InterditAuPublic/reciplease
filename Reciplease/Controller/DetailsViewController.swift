@@ -21,7 +21,6 @@ class DetailsViewController: UIViewController {
     // MARK: Properties
     var recipeManager = RecipeManager()
     
-    
     // MARK: View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,12 +29,25 @@ class DetailsViewController: UIViewController {
         _prepareView()
     }
     
+    @IBAction func favoriteButtonTouched(_ sender: Any) {
+        guard let _ = recipeManager.selectedRecipe else { return }
+        _updateDatabase()
+        recipeManager.selectedRecipe!.favorite!.toggle()
+        _updateFavoriteButtonColor()
+    }
+    
+    @IBAction func getDirectionButtonTouched(_ sender: Any) {
+        if let url = recipeManager.selectedRecipe?.url {
+            UIApplication.shared.open(url)
+        }
+    }
+    
     private func _prepareView() {
         guard let recipe = recipeManager.selectedRecipe else { return }
         recipeImage.image = UIImage(named: "recipe_default_background")
-//        if let url = recipe.image {
-//            recipeImage.dowloadFrom(url)
-//        }
+        if let url = recipe.image {
+            recipeImage.dowloadFrom(url)
+        }
         recipeTitleLabel.text = recipe.label
         recipeTitleLabel.accessibilityLabel  = recipeTitleLabel.text
         likesLabel.text = "\(recipe.yield)"
@@ -49,6 +61,30 @@ class DetailsViewController: UIViewController {
             getDirectionButton.accessibilityHint = "Go to the direction to prepare this recipe"
         }
         
+        _updateFavoriteButtonColor()
+
+    }
+    
+    /// Update favorite button tint color
+    private func _updateFavoriteButtonColor() {
+        if recipeManager.selectedRecipeIsFavorite {
+            favoriteButton.tintColor = UIColor(named: "Button Background")
+        } else {
+            favoriteButton.tintColor = UIColor(named: "ClearButtonBackground")
+        }
+    }
+    
+    /// Update the database (save or delete the record)
+    private func _updateDatabase() {
+        if recipeManager.selectedRecipeIsFavorite {
+            if let error = recipeManager.deleteRecordOnDatabase() {
+                 AlertManager.shared.sendAlert(error, on: self)
+            }
+        } else {
+            if let error = recipeManager.saveRecordOnDatabase() {
+                AlertManager.shared.sendAlert(error, on: self)
+            }
+        }
     }
 }
 

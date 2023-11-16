@@ -7,6 +7,7 @@
 
 import Foundation
 import Alamofire
+import CoreData
 
 class RecipeManager {
     
@@ -15,10 +16,20 @@ class RecipeManager {
     
     var selectedRecipe: Recipe? {
         didSet {
-            if let recipe = selectedRecipe {
+            if let recipe = selectedRecipe, _coreDataManager.checkIfRecipeIsFavorite(recipe) {
                 selectedRecipe!.favorite = true
             }
         }
+    }
+    
+    var favoriteRecipes: [Recipe] {
+        
+        return _coreDataManager.favorites
+    }
+    
+    var selectedRecipeIsFavorite: Bool {
+        guard let recipe = selectedRecipe else { return false }
+        return _coreDataManager.checkIfRecipeIsFavorite(recipe)
     }
     
     func getRecipes(forIngredients ingredients: [String], completionHandler: @escaping ((Bool) -> Void)) {
@@ -44,7 +55,33 @@ class RecipeManager {
            }
        }
     
+    /// Save the record on the database
+    func saveRecordOnDatabase() -> AlertManager.AlertReson? {
+        guard let recipe = selectedRecipe else { return .cannotSaveRecipe }
+        
+        var alert: AlertManager.AlertReson? = nil
+        
+        if _coreDataManager.addRecipe(recipe) {
+            selectedRecipe!.favorite = true
+        } else {
+            alert = .cannotSaveRecipe
+        }
+        
+        return alert
+    }
     
+    
+    /// Delete the record from the database
+    func deleteRecordOnDatabase() -> AlertManager.AlertReson? {
+        guard let selectedRecipe = selectedRecipe else { return .cannotDeleteRecipe }
+
+        return _coreDataManager.deleteRecipe(selectedRecipe) ?  nil : .cannotDeleteRecipe
+    }
+    
+    /// Reload the favorite list
+    func reloadFavoriteList() {
+        _coreDataManager.reloadFavoriteList()
+    }
     
     init(networkManager: NetworkManager = NetworkManager()) {
         _networkManager = networkManager
@@ -57,6 +94,7 @@ class RecipeManager {
     private let _appId = "b8ff4009"
     private var _downloadedRecipes: [Recipe] = []
     private var _networkManager: NetworkManager
+    private let _coreDataManager = CoreDataManager()
     
     private func _createRecipeSearchURL(withIngredients ingredients: [String]) -> URL? {
         let parameters = ["type": "public", "q": ingredients.joined(separator: ","), "app_id": _appId, "app_key": _appKey]

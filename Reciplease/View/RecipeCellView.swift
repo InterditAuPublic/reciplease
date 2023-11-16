@@ -18,9 +18,9 @@ class RecipeCellView: UITableViewCell {
     // MARK: Methods
     func configure(withRecipe recipe: Recipe) {
         _recipeImageView.image = UIImage(named: "recipe_default_background")
-//        if let url = recipe.image {
-//            _recipeImageView.dowloadFrom(url)
-//        }
+        if let url = recipe.image {
+            _recipeImageView.dowloadFrom(url)
+        }
         _recipeIngredientsLabel.text = recipe.ingredients.compactMap({$0.food}).joined(separator: ", ")
         _recipeIngredientsLabel.accessibilityLabel = _recipeIngredientsLabel.text
         _recipeTitleLabel.text = recipe.label
