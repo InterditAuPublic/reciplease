@@ -32,6 +32,7 @@
 		B0E41D442AF28C1D00A1F0E9 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E41D432AF28C1D00A1F0E9 /* CoreDataStack.swift */; };
 		B0EA17972B06500500A998DA /* FavoriteRecipes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA17952B06500500A998DA /* FavoriteRecipes+CoreDataClass.swift */; };
 		B0EA17982B06500500A998DA /* FavoriteRecipes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA17962B06500500A998DA /* FavoriteRecipes+CoreDataProperties.swift */; };
+		B0EA179A2B0679B900A998DA /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0EA17992B0679B900A998DA /* Int.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		B0E41D432AF28C1D00A1F0E9 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		B0EA17952B06500500A998DA /* FavoriteRecipes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoriteRecipes+CoreDataClass.swift"; sourceTree = "<group>"; };
 		B0EA17962B06500500A998DA /* FavoriteRecipes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoriteRecipes+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		B0EA17992B0679B900A998DA /* Int.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				B083052F2B04DD1400E1D3B8 /* UIImageView.swift */,
+				B0EA17992B0679B900A998DA /* Int.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 			files = (
 				B08305332B04EB7900E1D3B8 /* AlertManager.swift in Sources */,
 				B05B61DC2AC6E1CE00D2EF02 /* Reciplease.xcdatamodeld in Sources */,
+				B0EA179A2B0679B900A998DA /* Int.swift in Sources */,
 				B08305302B04DD1400E1D3B8 /* UIImageView.swift in Sources */,
 				B0E41D442AF28C1D00A1F0E9 /* CoreDataStack.swift in Sources */,
 				B0CC36272AD8B8BA0001C4E1 /* FavoriteListController.swift in Sources */,

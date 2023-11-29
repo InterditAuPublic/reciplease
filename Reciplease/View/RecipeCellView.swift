@@ -10,6 +10,18 @@ import UIKit
 
 class RecipeCellView: UITableViewCell {
     
+    
+    @IBOutlet private weak var _recipeImageView: UIImageView!
+    @IBOutlet private weak var _recipeTitleLabel: UILabel!
+    @IBOutlet private weak var _recipeIngredientsLabel: UILabel!
+    @IBOutlet private weak var _recipeLikesLabel: UILabel!
+    @IBOutlet private weak var _recipeTimeLabel: UILabel!
+    
+    @IBOutlet weak var _infoStackView: UIStackView!
+    @IBOutlet weak var _likesStackView: UIStackView!
+    @IBOutlet weak var _timeStackView: UIStackView!
+    
+    
     // MARK: View life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -21,20 +33,20 @@ class RecipeCellView: UITableViewCell {
         if let url = recipe.image {
             _recipeImageView.dowloadFrom(url)
         }
+        _recipeImageView.addBottomBlackGradient()
         _recipeIngredientsLabel.text = recipe.ingredients.compactMap({$0.food}).joined(separator: ", ")
-        _recipeIngredientsLabel.accessibilityLabel = _recipeIngredientsLabel.text
+        
+        
         _recipeTitleLabel.text = recipe.label
-        _recipeTitleLabel.accessibilityLabel = _recipeTitleLabel.text
         _recipeLikesLabel.text = "\(recipe.yield)"
-        _recipeLikesLabel.accessibilityLabel = "\(recipe.yield) likes"
-        _recipeTimeLabel.text = "\(recipe.totalTime)"
-        _recipeTimeLabel.accessibilityLabel = "\(recipe.totalTime) to prepare this recipe"
+        
+        
+        
+        
+        if let formattedTime  = recipe.totalTime.formatToStringTime {
+            _recipeTimeLabel.text = formattedTime
+        } else {
+            _recipeTimeLabel.isHidden = true
+        }
     }
-    
-    
-    @IBOutlet private weak var _recipeImageView: UIImageView!
-    @IBOutlet private weak var _recipeTitleLabel: UILabel!
-    @IBOutlet private weak var _recipeIngredientsLabel: UILabel!
-    @IBOutlet private weak var _recipeLikesLabel: UILabel!
-    @IBOutlet private weak var _recipeTimeLabel: UILabel!
 }

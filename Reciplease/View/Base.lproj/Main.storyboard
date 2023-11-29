@@ -129,11 +129,14 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="_infoStackView" destination="TEO-Y8-mh7" id="dpy-SC-Spu"/>
+                                            <outlet property="_likesStackView" destination="1E7-W4-yk6" id="66i-Qa-xwp"/>
                                             <outlet property="_recipeImageView" destination="Mhf-kp-IIz" id="X5d-o5-K9e"/>
                                             <outlet property="_recipeIngredientsLabel" destination="c3F-UY-AXP" id="rq4-t0-Qzv"/>
                                             <outlet property="_recipeLikesLabel" destination="r6M-YE-cpI" id="JnL-iG-Ypj"/>
                                             <outlet property="_recipeTimeLabel" destination="v2Z-Ky-umg" id="rZk-ou-Lb1"/>
                                             <outlet property="_recipeTitleLabel" destination="a7r-a4-u3R" id="QFV-SJ-oL4"/>
+                                            <outlet property="_timeStackView" destination="4et-uU-7Ay" id="LAk-jw-nba"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -142,28 +145,28 @@
                                 <rect key="frame" x="0.0" y="103" width="430" height="746"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="uoQ-Iv-NPq">
-                                        <rect key="frame" x="0.0" y="315" width="430" height="116"/>
+                                        <rect key="frame" x="0.0" y="311.33333333333331" width="430" height="123.66666666666669"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oops !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4SD-kT-BKu">
-                                                <rect key="frame" x="10" y="0.0" width="410" height="25.333333333333332"/>
-                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                                <rect key="frame" x="10" y="0.0" width="410" height="30.333333333333332"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="24"/>
                                                 <color key="textColor" name="Foreground"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It sems that you dont have favorite yet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9L-0w-qf7">
-                                                <rect key="frame" x="10" y="50.333333333333314" width="410" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="10" y="55.333333333333364" width="410" height="21.666666666666664"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                                 <color key="textColor" name="Foreground"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To add recipe to your favorite, search for a recipe add tap the star in the right top corner" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fma-iU-w5Q">
-                                                <rect key="frame" x="10" y="95.666666666666629" width="410" height="20.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <rect key="frame" x="10" y="102.00000000000006" width="410" height="21.666666666666671"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                                 <color key="textColor" name="Foreground"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="Background"/>
                                         <constraints>
                                             <constraint firstItem="o9L-0w-qf7" firstAttribute="leading" secondItem="uoQ-Iv-NPq" secondAttribute="leading" constant="10" id="JqF-YA-G8Z"/>
                                             <constraint firstAttribute="trailing" secondItem="o9L-0w-qf7" secondAttribute="trailing" constant="10" id="N7j-b7-PRG"/>
@@ -771,7 +774,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="418" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="- Ingredient" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LDw-LW-K3b">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="- Ingredient" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LDw-LW-K3b">
                                                     <rect key="frame" x="20" y="0.0" width="378" height="43.666667938232422"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="16"/>
@@ -846,9 +849,11 @@
                         <outlet property="getDirectionButton" destination="2So-9F-UT1" id="rz9-yP-2mI"/>
                         <outlet property="ingredientTableView" destination="5vY-gN-P56" id="eGw-5O-i5u"/>
                         <outlet property="likesLabel" destination="JYa-XM-w4e" id="4iK-lU-NBh"/>
+                        <outlet property="likesStackView" destination="byI-Kl-R0R" id="XIi-Dp-k2K"/>
                         <outlet property="recipeImage" destination="Q38-9D-QLC" id="YkD-yg-305"/>
                         <outlet property="recipeTitleLabel" destination="r1k-g7-btJ" id="UNW-ej-iLi"/>
                         <outlet property="timeLabel" destination="Mqj-dV-i81" id="hCv-pO-o4w"/>
+                        <outlet property="timeStackView" destination="0Gz-Ky-dNL" id="xym-Yw-MAy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVi-Jb-5w8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -857,7 +862,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="62n-zD-ubV"/>
+        <segue reference="Qco-Lw-8md"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>

@@ -18,6 +18,10 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var getDirectionButton: UIButton!
     @IBOutlet weak var favoriteButton: UIBarButtonItem!
     
+    @IBOutlet weak var likesStackView: UIStackView!
+    @IBOutlet weak var timeStackView: UIStackView!
+    
+    
     // MARK: Properties
     var recipeManager = RecipeManager()
     
@@ -27,6 +31,7 @@ class DetailsViewController: UIViewController {
         _delegateSetup()
         _dataSourceSetup()
         _prepareView()
+        _prepareAccessibility()
     }
     
     @IBAction func favoriteButtonTouched(_ sender: Any) {
@@ -49,21 +54,39 @@ class DetailsViewController: UIViewController {
             recipeImage.dowloadFrom(url)
         }
         recipeTitleLabel.text = recipe.label
-        recipeTitleLabel.accessibilityLabel  = recipeTitleLabel.text
         likesLabel.text = "\(recipe.yield)"
-        likesLabel.accessibilityLabel = "\(recipe.yield) likes"
-        timeLabel.text = "\(recipe.totalTime)"
-        timeLabel.accessibilityLabel = "\(recipe.totalTime) to prepare this recipe"
-                
+        recipeImage.addBottomBackgroundGradient()
+        
+        if let formattedTime  = recipe.totalTime.formatToStringTime {
+            timeLabel.text = formattedTime
+        } else {
+            timeStackView.isHidden = true
+        }
+        
         if recipe.url == nil {
             getDirectionButton.isEnabled = false
-            getDirectionButton.accessibilityHint = "Get direction button"
-            getDirectionButton.accessibilityHint = "Go to the direction to prepare this recipe"
         }
         
         _updateFavoriteButtonColor()
 
     }
+    
+    private func _prepareAccessibility() {
+        likesLabel.accessibilityLabel = "Number of Likes: \(recipeManager.selectedRecipe?.yield ?? 0)"
+        timeLabel.accessibilityLabel = "Total Time to Prepare: \(recipeManager.selectedRecipe?.totalTime.formatToStringTimeAccessibilityLabel ?? "No time information to prepare this recipe")"
+        recipeTitleLabel.accessibilityLabel = "Recipe Title: \(recipeManager.selectedRecipe?.label ?? "")"
+        ingredientTableView.accessibilityLabel = "Ingredient List"
+        getDirectionButton.accessibilityLabel = "Get Directions Button"
+        
+        if recipeManager.selectedRecipeIsFavorite {
+            favoriteButton.accessibilityLabel = "Remove from Favorites Button"
+        } else {
+            favoriteButton.accessibilityLabel = "Add to Favorites Button"
+        }
+    }
+
+    
+    
     
     /// Update favorite button tint color
     private func _updateFavoriteButtonColor() {
