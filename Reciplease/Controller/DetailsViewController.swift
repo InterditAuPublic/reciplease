@@ -17,7 +17,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var ingredientTableView: UITableView!
     @IBOutlet weak var getDirectionButton: UIButton!
     @IBOutlet weak var favoriteButton: UIBarButtonItem!
-    
+
     @IBOutlet weak var likesStackView: UIStackView!
     @IBOutlet weak var timeStackView: UIStackView!
     
@@ -68,7 +68,6 @@ class DetailsViewController: UIViewController {
         }
         
         _updateFavoriteButtonColor()
-
     }
     
     private func _prepareAccessibility() {
@@ -84,9 +83,6 @@ class DetailsViewController: UIViewController {
             favoriteButton.accessibilityLabel = "Add to Favorites Button"
         }
     }
-
-    
-    
     
     /// Update favorite button tint color
     private func _updateFavoriteButtonColor() {

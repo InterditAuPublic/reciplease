@@ -13,7 +13,6 @@ class RecipeListController: UIViewController {
     // MARK: Properties
     var recipeManager = RecipeManager()
     private let _segueToDetails = "recipeListToDetailSegue"
-    private var _selectedRecipe: Recipe?
     
     // MARK: Outlets
     @IBOutlet weak var recipeTableView: UITableView!
