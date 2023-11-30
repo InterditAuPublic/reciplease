@@ -194,11 +194,6 @@
                             <constraint firstItem="m1E-oh-Twr" firstAttribute="leading" secondItem="HOi-yO-I6f" secondAttribute="leading" id="qF6-C4-aZo"/>
                             <constraint firstItem="m1E-oh-Twr" firstAttribute="top" secondItem="HOi-yO-I6f" secondAttribute="top" id="vTb-ij-u1r"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="NxO-z0-g1O"/>
-                            </mask>
-                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorite" image="star" catalog="system" id="F9T-4v-urD"/>
                     <navigationItem key="navigationItem" title="Reciplease" leftItemsSupplementBackButton="YES" id="SVA-QE-0gI">

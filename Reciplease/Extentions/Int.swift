@@ -29,7 +29,7 @@ extension Int {
     
     var formatToStringTimeAccessibilityLabel: String? {
         guard self > 0 else {
-            return "No time provided"
+            return "No time provided to prepare this recipe"
         }
         
         let hours = self / 60
