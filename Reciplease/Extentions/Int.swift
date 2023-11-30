@@ -11,7 +11,7 @@ extension Int {
     
     var formatToStringTime: String? {
         guard self > 0 else {
-            return nil
+            return "N/A"
         }
         
         let hours = self / 60
@@ -29,7 +29,7 @@ extension Int {
     
     var formatToStringTimeAccessibilityLabel: String? {
         guard self > 0 else {
-            return nil
+            return "No time provided"
         }
         
         let hours = self / 60
