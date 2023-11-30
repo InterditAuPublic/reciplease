@@ -9,7 +9,7 @@ import XCTest
 @testable import Reciplease
 
 class RecipleaseTests: XCTestCase {
-    private let ingredients = ["lemon", "egg"]
+    private let ingredients = ["cheese", "tomato"]
     var recipeManager: RecipeManager!
     var coreDataStack: MockCoreDataStack!
     var fakeNetworkManager: FakeNetworkManager!
@@ -23,7 +23,7 @@ class RecipleaseTests: XCTestCase {
     
     override func tearDown() {
         super.tearDown()
-        _ = recipeManager.deleteRecordOnDatabase()
+        _ = recipeManager.deleteAllRecordOnDatabase()
     }
     
     // Getting recipes

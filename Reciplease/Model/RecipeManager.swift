@@ -78,6 +78,9 @@ class RecipeManager {
         return _coreDataManager.deleteRecipe(selectedRecipe) ?  nil : .cannotDeleteRecipe
     }
     
+    func deleteAllRecordOnDatabase() -> AlertManager.AlertReson? {
+        return _coreDataManager.deleteAllRecipe() ? nil : .cannotDeleteRecipe
+    }
     /// Reload the favorite list
     func reloadFavoriteList() {
         _coreDataManager.reloadFavoriteList()

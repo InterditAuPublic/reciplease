@@ -1,0 +1,26 @@
+//
+//  IntExtentionTests.swift
+//  RecipleaseTests
+//
+//  Created by Melvin Poutrel on 29/11/2023.
+//
+
+import XCTest
+@testable import Reciplease
+
+final class IntExtensionTests: XCTestCase {
+    
+    func testFormatToStringTime() {
+        XCTAssertEqual(0.formatToStringTime, nil)
+        XCTAssertEqual(30.formatToStringTime, "30min")
+        XCTAssertEqual(60.formatToStringTime, "1h")
+        XCTAssertEqual(90.formatToStringTime, "1h 30min")
+    }
+    
+    func testFormatToStringTimeAccessibilityLabel() {
+        XCTAssertEqual(0.formatToStringTimeAccessibilityLabel, nil)
+        XCTAssertEqual(30.formatToStringTimeAccessibilityLabel, "30 minutes")
+        XCTAssertEqual(60.formatToStringTimeAccessibilityLabel, "1 hours")
+        XCTAssertEqual(90.formatToStringTimeAccessibilityLabel, "1 hours and 30 minutes")
+    }
+}
