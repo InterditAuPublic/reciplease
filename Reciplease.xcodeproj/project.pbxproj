@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B003FD7F2B1CC15F005FB8D6 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B003FD7E2B1CC15F005FB8D6 /* InfoView.swift */; };
+		B003FD812B1CC308005FB8D6 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B003FD802B1CC308005FB8D6 /* CustomButton.swift */; };
 		B00D70902B17AA4F00C28713 /* recipes.json in Resources */ = {isa = PBXBuildFile; fileRef = B00D708F2B17AA4F00C28713 /* recipes.json */; };
 		B00D70922B17AAA300C28713 /* MockCoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D70912B17AAA300C28713 /* MockCoreDataStack.swift */; };
 		B00D70942B17AABA00C28713 /* FakeResponseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00D70932B17AABA00C28713 /* FakeResponseData.swift */; };
@@ -58,6 +60,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B003FD7E2B1CC15F005FB8D6 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		B003FD802B1CC308005FB8D6 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		B00D708F2B17AA4F00C28713 /* recipes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recipes.json; sourceTree = "<group>"; };
 		B00D70912B17AAA300C28713 /* MockCoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoreDataStack.swift; sourceTree = "<group>"; };
 		B00D70932B17AABA00C28713 /* FakeResponseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeResponseData.swift; sourceTree = "<group>"; };
@@ -222,6 +226,8 @@
 				B05B61D72AC6E1CE00D2EF02 /* Main.storyboard */,
 				B0CC361E2AD833020001C4E1 /* IngredientCellView.swift */,
 				B0D5624C2ADE07D500CAB075 /* RecipeCellView.swift */,
+				B003FD7E2B1CC15F005FB8D6 /* InfoView.swift */,
+				B003FD802B1CC308005FB8D6 /* CustomButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -402,8 +408,10 @@
 				B0CC36272AD8B8BA0001C4E1 /* FavoriteListController.swift in Sources */,
 				B01FAFEC2AE155EC002E9D21 /* DetailsViewController.swift in Sources */,
 				B0D5624D2ADE07D500CAB075 /* RecipeCellView.swift in Sources */,
+				B003FD7F2B1CC15F005FB8D6 /* InfoView.swift in Sources */,
 				B049244D2AE70D0F00728AF6 /* NetworkManager.swift in Sources */,
 				B0D5624B2ADE069F00CAB075 /* RecipeListController.swift in Sources */,
+				B003FD812B1CC308005FB8D6 /* CustomButton.swift in Sources */,
 				B0E41D422AF28C0200A1F0E9 /* CoreDataManager.swift in Sources */,
 				B0EA17972B06500500A998DA /* FavoriteRecipes+CoreDataClass.swift in Sources */,
 				B0CC361F2AD833020001C4E1 /* IngredientCellView.swift in Sources */,
