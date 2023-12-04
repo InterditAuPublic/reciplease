@@ -59,9 +59,7 @@ class DetailsViewController: UIViewController {
         
         if let formattedTime  = recipe.totalTime.formatToStringTime {
             timeLabel.text = formattedTime
-        } else {
-            timeStackView.isHidden = true
-        }
+        } 
         
         if recipe.url == nil {
             getDirectionButton.isEnabled = false
@@ -71,25 +69,24 @@ class DetailsViewController: UIViewController {
     }
     
     private func _prepareAccessibility() {
-        likesLabel.accessibilityLabel = "Number of Likes: \(recipeManager.selectedRecipe?.yield ?? 0)"
-        timeLabel.accessibilityLabel = "Total Time to Prepare: \(recipeManager.selectedRecipe?.totalTime.formatToStringTimeAccessibilityLabel ?? "No time information to prepare this recipe")"
+        likesLabel.accessibilityLabel = "\(recipeManager.selectedRecipe?.yield ?? 0) likes"
+        timeLabel.accessibilityLabel = recipeManager.selectedRecipe?.totalTime.formatToStringTimeAccessibilityLabel
         recipeTitleLabel.accessibilityLabel = "Recipe Title: \(recipeManager.selectedRecipe?.label ?? "")"
         ingredientTableView.accessibilityLabel = "Ingredient List"
         getDirectionButton.accessibilityLabel = "Get Directions Button"
-        
-        if recipeManager.selectedRecipeIsFavorite {
-            favoriteButton.accessibilityLabel = "Remove from Favorites Button"
-        } else {
-            favoriteButton.accessibilityLabel = "Add to Favorites Button"
-        }
+        getDirectionButton.accessibilityHint = "Go to the recipe website to get the directions"
     }
     
     /// Update favorite button tint color
     private func _updateFavoriteButtonColor() {
         if recipeManager.selectedRecipeIsFavorite {
             favoriteButton.tintColor = UIColor(named: "Button Background")
+            favoriteButton.accessibilityLabel = "Remove from Favorites"
+            favoriteButton.accessibilityHint = "Remove this recipe from your favorites"
         } else {
             favoriteButton.tintColor = UIColor(named: "ClearButtonBackground")
+            favoriteButton.accessibilityLabel = "Add to Favorites"
+            favoriteButton.accessibilityHint = "Add this recipe to your favorites"
         }
     }
     

@@ -23,11 +23,12 @@ extension Int {
         case (_, 0):
             return String(format: "%dh", hours)
         default:
-            return String(format: "%dh %dmin", hours, minutes)
+            return String(format: "%dh%dmin", hours, minutes)
         }
     }
     
     var formatToStringTimeAccessibilityLabel: String? {
+        let sentence = "Time to prepare this recipe: "
         guard self > 0 else {
             return "No time provided to prepare this recipe"
         }
@@ -37,11 +38,11 @@ extension Int {
         
         switch (hours, minutes) {
         case (0, _):
-            return String(format: "%d minutes", minutes)
+            return String(format: "\(sentence) %d minutes", minutes)
         case (_, 0):
-            return String(format: "%d hours", hours)
+            return String(format: "\(sentence) %d hours", hours)
         default:
-            return String(format: "%d hours and %d minutes", hours, minutes)
+            return String(format: "\(sentence) %d hours and %d minutes", hours, minutes)
         }
     }
 }

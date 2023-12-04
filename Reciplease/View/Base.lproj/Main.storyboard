@@ -33,23 +33,23 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="recipe_default_background" translatesAutoresizingMaskIntoConstraints="NO" id="Mhf-kp-IIz" userLabel="Recipe Image View">
                                                     <rect key="frame" x="0.0" y="0.0" width="430" height="170"/>
                                                 </imageView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MfA-qp-kt7" userLabel="Info View">
-                                                    <rect key="frame" x="358" y="8" width="62" height="45"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MfA-qp-kt7" userLabel="Info View" customClass="InfoView" customModule="Reciplease" customModuleProvider="target">
+                                                    <rect key="frame" x="350" y="7.9999999999999964" width="70" height="55.666666666666657"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TEO-Y8-mh7">
-                                                            <rect key="frame" x="5" y="5" width="52" height="35"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TEO-Y8-mh7">
+                                                            <rect key="frame" x="5" y="5" width="60" height="45.666666666666664"/>
                                                             <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1E7-W4-yk6">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="52" height="15"/>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="1E7-W4-yk6">
+                                                                    <rect key="frame" x="14.666666666666689" y="0.0" width="45.333333333333343" height="20.333333333333332"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10k" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="r6M-YE-cpI" userLabel="45m">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="37" height="15"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="28.333333333333332" height="20.333333333333332"/>
                                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                                             <color key="textColor" name="Foreground"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hand.thumbsup.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="JLN-hX-cc6">
-                                                                            <rect key="frame" x="37" y="0.66666666666666607" width="15" height="13.666666666666668"/>
+                                                                            <rect key="frame" x="30.333333333333314" y="3.3333333333333321" width="15" height="13.666666666666668"/>
                                                                             <color key="tintColor" name="AccentColor"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" secondItem="JLN-hX-cc6" secondAttribute="height" multiplier="1:1" id="VVs-rC-Mcv"/>
@@ -58,17 +58,17 @@
                                                                         </imageView>
                                                                     </subviews>
                                                                 </stackView>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4et-uU-7Ay">
-                                                                    <rect key="frame" x="0.0" y="20" width="52" height="15"/>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="4et-uU-7Ay">
+                                                                    <rect key="frame" x="6.3333333333333108" y="25.333333333333336" width="53.666666666666657" height="20.333333333333336"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="45m" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="v2Z-Ky-umg">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="37" height="15"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="36.666666666666664" height="20.333333333333332"/>
                                                                             <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                                             <color key="textColor" name="Foreground"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Izk-Wt-wfx">
-                                                                            <rect key="frame" x="37" y="0.99999999999999822" width="15" height="13.666666666666668"/>
+                                                                            <rect key="frame" x="38.666666666666686" y="3.6666666666666625" width="15" height="13.666666666666666"/>
                                                                             <color key="tintColor" name="AccentColor"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="15" id="JM6-P4-SnN"/>
@@ -88,10 +88,9 @@
                                                         <constraint firstItem="TEO-Y8-mh7" firstAttribute="top" secondItem="MfA-qp-kt7" secondAttribute="top" constant="5" id="1jU-3S-RXM"/>
                                                         <constraint firstItem="TEO-Y8-mh7" firstAttribute="centerY" secondItem="MfA-qp-kt7" secondAttribute="centerY" id="7Xa-B6-AIi"/>
                                                         <constraint firstAttribute="trailing" secondItem="TEO-Y8-mh7" secondAttribute="trailing" constant="5" id="HgL-2W-9i6"/>
-                                                        <constraint firstAttribute="width" constant="62" id="LJ1-56-4Fo"/>
+                                                        <constraint firstAttribute="width" constant="70" id="LJ1-56-4Fo"/>
                                                         <constraint firstItem="TEO-Y8-mh7" firstAttribute="centerX" secondItem="MfA-qp-kt7" secondAttribute="centerX" id="PYh-NV-VwF"/>
                                                         <constraint firstItem="TEO-Y8-mh7" firstAttribute="leading" secondItem="MfA-qp-kt7" secondAttribute="leading" constant="5" id="br7-QQ-r5m"/>
-                                                        <constraint firstAttribute="height" constant="45" id="mOP-L4-OPc"/>
                                                         <constraint firstAttribute="bottom" secondItem="TEO-Y8-mh7" secondAttribute="bottom" constant="5" id="qPJ-Di-xHJ"/>
                                                     </constraints>
                                                 </view>
@@ -156,7 +155,7 @@
                                                 <color key="textColor" name="Foreground"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To add recipe to your favorite, search for a recipe add tap the star in the right top corner" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fma-iU-w5Q">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To add recipe to your favorite, search for a recipe, open it and tap the star in the right top corner" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fma-iU-w5Q">
                                                 <rect key="frame" x="10" y="102.00000000000006" width="410" height="21.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                                 <color key="textColor" name="Foreground"/>
@@ -194,6 +193,11 @@
                             <constraint firstItem="m1E-oh-Twr" firstAttribute="leading" secondItem="HOi-yO-I6f" secondAttribute="leading" id="qF6-C4-aZo"/>
                             <constraint firstItem="m1E-oh-Twr" firstAttribute="top" secondItem="HOi-yO-I6f" secondAttribute="top" id="vTb-ij-u1r"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="NxO-z0-g1O"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorite" image="star" catalog="system" id="F9T-4v-urD"/>
                     <navigationItem key="navigationItem" title="Reciplease" leftItemsSupplementBackButton="YES" id="SVA-QE-0gI">
@@ -241,7 +245,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyk-Ri-IdC">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyk-Ri-IdC" customClass="CustomButton" customModule="Reciplease" customModuleProvider="target">
                                                 <rect key="frame" x="320.66666666666669" y="0.0" width="93.333333333333314" height="34"/>
                                                 <color key="backgroundColor" name="Button Background"/>
                                                 <accessibility key="accessibilityConfiguration" hint="Add ingredient to the list"/>
@@ -279,7 +283,7 @@
                                         <color key="textColor" name="Foreground"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SwG-Sc-ubP">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SwG-Sc-ubP" customClass="CustomButton" customModule="Reciplease" customModuleProvider="target">
                                         <rect key="frame" x="320.66666666666669" y="0.0" width="93.333333333333314" height="40"/>
                                         <color key="backgroundColor" name="ClearButtonBackground"/>
                                         <constraints>
@@ -298,10 +302,10 @@
                                     <constraint firstItem="SwG-Sc-ubP" firstAttribute="width" secondItem="dWn-WZ-6Ud" secondAttribute="width" multiplier="0.3" id="hnS-hp-e4G"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwO-ow-Wvw">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwO-ow-Wvw" customClass="CustomButton" customModule="Reciplease" customModuleProvider="target">
                                 <rect key="frame" x="50" y="774" width="330" height="60"/>
                                 <color key="backgroundColor" name="Button Background"/>
-                                <accessibility key="accessibilityConfiguration" hint="Begin searching of recipe with entered ingredients"/>
+                                <accessibility key="accessibilityConfiguration" hint="Search for recipes with entered ingredients" label="Seach Button"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="15u-yp-Tpj"/>
                                 </constraints>
@@ -421,7 +425,7 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="24"/>
+                            <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
                             <color key="textColor" name="Foreground"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
@@ -462,6 +466,7 @@
         <scene sceneID="E6X-DP-hct">
             <objects>
                 <tabBarController id="SRc-qW-iS2" sceneMemberID="viewController">
+                    <nil key="simulatedTopBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" id="GaK-Ph-GRh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -503,7 +508,7 @@
                                                     <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="tintColor" name="Button Background"/>
                                                 </imageView>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOD-jk-k8z" userLabel="Info View">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOD-jk-k8z" userLabel="Info View" customClass="InfoView" customModule="Reciplease" customModuleProvider="target">
                                                     <rect key="frame" x="350" y="7.9999999999999964" width="70" height="55.666666666666657"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TYo-L5-l3q">
@@ -647,7 +652,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Reciplease" largeTitleDisplayMode="always" id="kcP-nB-Kud">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="zyD-yn-bm6"/>
+                        <barButtonItem key="backBarButtonItem" title="Search" id="zyD-yn-bm6"/>
                     </navigationItem>
                     <connections>
                         <outlet property="noRecipeFoundView" destination="vHZ-hD-aab" id="yU5-cG-fol"/>
@@ -680,7 +685,7 @@
                                     </hierarchicalColors>
                                 </imageReference>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9N5-dE-9Pj" userLabel="Info View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9N5-dE-9Pj" userLabel="Info View" customClass="InfoView" customModule="Reciplease" customModuleProvider="target">
                                 <rect key="frame" x="340" y="123.00000000000001" width="70" height="55.666666666666671"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="bottom" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lP6-Yz-CnJ">
@@ -783,7 +788,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2So-9F-UT1">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2So-9F-UT1" customClass="CustomButton" customModule="Reciplease" customModuleProvider="target">
                                 <rect key="frame" x="45" y="774" width="340" height="60"/>
                                 <color key="backgroundColor" name="Button Background"/>
                                 <constraints>
@@ -791,7 +796,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Get directions">
-                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                     <color key="baseForegroundColor" name="Foreground"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -855,7 +860,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Qco-Lw-8md"/>
+        <segue reference="62n-zD-ubV"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
@@ -884,13 +889,13 @@
             <color red="0.65700000524520874" green="0.63999998569488525" blue="0.63599997758865356" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

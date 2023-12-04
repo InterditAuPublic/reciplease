@@ -29,24 +29,22 @@ class RecipeCellView: UITableViewCell {
     
     // MARK: Methods
     func configure(withRecipe recipe: Recipe) {
-        _recipeImageView.image = UIImage(named: "recipe_default_background")
         if let url = recipe.image {
             _recipeImageView.dowloadFrom(url)
+        } else {
+            _recipeImageView.image = UIImage(named: "recipe_default_background")
         }
         _recipeImageView.addBottomBlackGradient()
         _recipeIngredientsLabel.text = recipe.ingredients.compactMap({$0.food}).joined(separator: ", ")
-        
-        
+        _recipeIngredientsLabel.accessibilityLabel = "Ingredients: \(recipe.ingredients.compactMap({$0.food}).joined(separator: ", "))"
         _recipeTitleLabel.text = recipe.label
+        _recipeTitleLabel.accessibilityLabel = "Recipe title: \(recipe.label)"
         _recipeLikesLabel.text = "\(recipe.yield)"
-        
-        
-        
-        
-        if let formattedTime  = recipe.totalTime.formatToStringTime {
+        _recipeLikesLabel.accessibilityLabel = "\(recipe.yield) likes"
+
+        if let formattedTime = recipe.totalTime.formatToStringTime {
             _recipeTimeLabel.text = formattedTime
-        } else {
-            _recipeTimeLabel.isHidden = true
+            _recipeTimeLabel.accessibilityLabel = recipe.totalTime.formatToStringTimeAccessibilityLabel
         }
     }
 }

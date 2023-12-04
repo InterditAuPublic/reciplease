@@ -14,6 +14,8 @@ class IngredientListController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         _dataSourceSetup()
+        _accessibilitySetup()
+        _delegateSetup()
     }
     
     // MARK: Properties
@@ -78,6 +80,36 @@ class IngredientListController: UIViewController {
         ingredientTableView.reloadData()
         ingredientTextField.text = ""
     }
+
+    // MARK: Accessibility
+    private func _accessibilitySetup() {
+        ingredientTextField.isAccessibilityElement = true
+        ingredientTextField.accessibilityLabel = "Ingredient Input"
+        ingredientTextField.accessibilityHint = "Type the name of an ingredient"
+
+        ingredientTableView.isAccessibilityElement = true
+        ingredientTableView.accessibilityLabel = "Ingredient List"
+        ingredientTableView.accessibilityHint = "List of added ingredients"
+
+        loadingView.isAccessibilityElement = true
+        loadingView.accessibilityLabel = "Loading View"
+        loadingView.accessibilityHint = "Loading recipes, please wait"
+    }
+}
+
+// MARK: Delegate extension
+extension IngredientListController: UITableViewDelegate, UITextFieldDelegate  {
+
+    /// Setup the delegate of the table view
+    private func _delegateSetup() {
+        ingredientTableView.delegate = self
+        ingredientTextField.delegate = self
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        _addIngredient()
+        return false
+    }
 }
 
 // MARK: Data source extension
@@ -93,7 +125,13 @@ extension IngredientListController: UITableViewDataSource {
         guard let ingredientCell = tableView.dequeueReusableCell(withIdentifier: "ingredientCell", for: indexPath) as? IngredientCellView else {
             return UITableViewCell()
         }
+        // Configure the cell
         ingredientCell.configure(withIngredient: _ingredients[indexPath.row])
+        
+        // Accessibility for each cell
+        ingredientCell.isAccessibilityElement = true
+        ingredientCell.accessibilityHint = "Added ingredient"
+        
         return ingredientCell
     }
 
