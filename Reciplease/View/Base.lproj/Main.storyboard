@@ -140,8 +140,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NxO-z0-g1O" userLabel="No Favorite View">
                                 <rect key="frame" x="0.0" y="103" width="430" height="746"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="uoQ-Iv-NPq">
-                                        <rect key="frame" x="0.0" y="311.33333333333331" width="430" height="123.66666666666669"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="uoQ-Iv-NPq">
+                                        <rect key="frame" x="0.0" y="297.33333333333331" width="430" height="151.66666666666669"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oops !" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4SD-kT-BKu">
                                                 <rect key="frame" x="10" y="0.0" width="410" height="30.333333333333332"/>
@@ -149,14 +149,14 @@
                                                 <color key="textColor" name="Foreground"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It sems that you dont have favorite yet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9L-0w-qf7">
-                                                <rect key="frame" x="10" y="55.333333333333364" width="410" height="21.666666666666664"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You dont have any favorite yet" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o9L-0w-qf7">
+                                                <rect key="frame" x="10" y="69.333333333333371" width="410" height="21.666666666666671"/>
                                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                                 <color key="textColor" name="Foreground"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To add recipe to your favorite, search for a recipe, open it and tap the star in the right top corner" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fma-iU-w5Q">
-                                                <rect key="frame" x="10" y="102.00000000000006" width="410" height="21.666666666666671"/>
+                                                <rect key="frame" x="10" y="130.00000000000006" width="410" height="21.666666666666657"/>
                                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
                                                 <color key="textColor" name="Foreground"/>
                                                 <nil key="highlightedColor"/>
@@ -193,11 +193,6 @@
                             <constraint firstItem="m1E-oh-Twr" firstAttribute="leading" secondItem="HOi-yO-I6f" secondAttribute="leading" id="qF6-C4-aZo"/>
                             <constraint firstItem="m1E-oh-Twr" firstAttribute="top" secondItem="HOi-yO-I6f" secondAttribute="top" id="vTb-ij-u1r"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="NxO-z0-g1O"/>
-                            </mask>
-                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorite" image="star" catalog="system" id="F9T-4v-urD"/>
                     <navigationItem key="navigationItem" title="Reciplease" leftItemsSupplementBackButton="YES" id="SVA-QE-0gI">
@@ -211,7 +206,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkK-0f-AKU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1383" y="283"/>
+            <point key="canvasLocation" x="1382.7906976744187" y="282.61802575107299"/>
         </scene>
         <!--Search-->
         <scene sceneID="daf-Mf-LCV">
@@ -860,7 +855,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="62n-zD-ubV"/>
+        <segue reference="Qco-Lw-8md"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
